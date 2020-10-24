@@ -1,0 +1,12 @@
+.create{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+
+    label{
+      font-size: 20px;
+      font-weight: 700;
+    }
+}

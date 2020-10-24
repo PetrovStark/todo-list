@@ -14,7 +14,7 @@ class TodosController extends Controller
      */
     public function index()
     {
-        $todos = Todo::orderBy('created_at', 'desc')->get();
+        $todos = Todo::orderBy('updated_at', 'desc')->get();
         return view( "todos.index", compact('todos') );
     }
 
@@ -25,7 +25,7 @@ class TodosController extends Controller
      */
     public function create()
     {
-        //
+        return view('todos.create');
     }
 
     /**
@@ -36,7 +36,19 @@ class TodosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request, [
+          'title' => 'required',
+          'content' => 'required',
+          'due' => 'required'
+      ]);
+
+      $todo = new Todo;
+      $todo->title = $request->input('title');
+      $todo->content = $request->input('content');
+      $todo->due = $request->input('due');
+      $todo->save();
+
+      return redirect('/')->with('sucess', 'Task "' . $todo->title . '" created sucessfully!');
     }
 
     /**
@@ -56,9 +68,9 @@ class TodosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Todo $todo)
     {
-        //
+        return view( 'todos.edit', compact('todo') );
     }
 
     /**
@@ -70,7 +82,19 @@ class TodosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'content' => 'required',
+            'due' => 'required'
+        ]);
+
+        $todo = Todo::find($id);
+        $todo->title = $request->input('title');
+        $todo->content = $request->input('content');
+        $todo->due = $request->input('due');
+        $todo->save();
+
+        return redirect('/')->with('sucess', 'Task "' . $todo->title . '" updated sucessfully!');
     }
 
     /**
@@ -81,6 +105,9 @@ class TodosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $todo = Todo::find($id);
+        $todo->delete();
+
+        return redirect('/')->with('sucess', 'Task "'. $todo->title .'" deleted sucessfully!');
     }
 }

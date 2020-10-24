@@ -8,9 +8,10 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
+        @include('layout.messages')
         <div class="container">
             @yield('content')
         </div>
-        <footer>Copyrights SamuraiPetrus.</footer>
+        <footer>Developed by the <a href="https://github.com/SamuraiPetrus" target="_blank">SamuraiPetrus'</a> katana fingers.</footer>
     </body>
 </html>

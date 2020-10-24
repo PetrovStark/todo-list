@@ -1,0 +1,14 @@
+.input{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.input.textarea{
+    height: 100px;
+    padding: 10px;
+}

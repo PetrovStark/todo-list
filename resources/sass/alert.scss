@@ -1,0 +1,12 @@
+.alert{
+  padding: 20px 30px;
+  &-danger{
+      background: salmon;
+      color: $cl-danger;
+  }
+  &-sucess{
+      text-align: center;
+      background: lightgreen;
+      color: green;
+  }
+}

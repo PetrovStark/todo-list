@@ -1,13 +1,18 @@
-//
-
+//Components
 @import 'variables';
 @import 'reset';
+@import 'alert';
 @import 'link';
+@import 'button';
+@import 'input';
 @import 'body';
 @import 'intro';
 @import 'tasks';
 @import 'container';
 @import 'card';
 @import 'label';
-@import 'show';
 @import 'footer';
+
+//CRUD Templates
+@import 'show';
+@import 'create';

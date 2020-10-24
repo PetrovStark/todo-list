@@ -5,17 +5,75 @@
 }
 
 a {
-  color: blue;
+  color: #758fff;
   text-decoration: none;
 }
 
+.alert {
+  padding: 20px 30px;
+}
+
+.alert-danger {
+  background: salmon;
+  color: #a10000;
+}
+
+.alert-sucess {
+  text-align: center;
+  background: lightgreen;
+  color: green;
+}
+
 .link {
-  color: blue;
+  color: #758fff;
   font-size: 25px;
+  display: inline-block;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.link.danger {
+  color: #a10000;
 }
 
 .link i {
   margin-right: 10px;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.button {
+  background: #758fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  border: 2px solid #758fff;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background: transparent;
+  color: #758fff;
+}
+
+.input {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.input.textarea {
+  height: 100px;
+  padding: 10px;
 }
 
 body {
@@ -28,14 +86,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .intro h1 {
   margin-bottom: 15px;
-}
-
-.tasks {
-  padding-top: 30px;
 }
 
 @media screen and (min-width: 960px) {
@@ -92,6 +147,17 @@ body {
   background: #a10000;
 }
 
+.label-due {
+  background: #363636;
+}
+
+footer {
+  padding: 30px 0;
+  background: #363636;
+  color: #fff;
+  text-align: center;
+}
+
 .show h1,
 .show p,
 .show span {
@@ -108,10 +174,16 @@ body {
   font-size: 20px;
 }
 
-footer {
-  padding: 30px 0;
-  background: #363636;
-  color: #fff;
-  text-align: center;
+.create {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.create label {
+  font-size: 20px;
+  font-weight: 700;
 }
 
