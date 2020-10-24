@@ -1,0 +1,11 @@
+.card{
+    background: white;
+    border: 2px solid lightgray;
+    padding: 15px;
+    border-radius: 5px;
+    align-self: flex-start;
+    span, h2, p{
+      display: block;
+      margin-bottom: 10px;
+    }
+}

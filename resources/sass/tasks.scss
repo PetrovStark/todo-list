@@ -1,0 +1,10 @@
+.tasks{
+  padding-top: 30px;
+}
+@media screen and ( min-width: $desktop ) {
+    .tasks{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+    }
+}
