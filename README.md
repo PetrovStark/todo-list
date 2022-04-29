@@ -1,4 +1,5 @@
+<img src="todolist.png"></img>
 # Do It!
-A simple task manager built in Laravel.
+A simple task manager application.
 
-[See it in action](http://hidden-gorge-09069.herokuapp.com/)
+[Test the application](http://hidden-gorge-09069.herokuapp.com/)
